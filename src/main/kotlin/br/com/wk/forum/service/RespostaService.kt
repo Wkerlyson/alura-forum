@@ -1,5 +1,6 @@
 package br.com.wk.forum.service
 
+import br.com.wk.forum.dto.NovaRespostaForm
 import br.com.wk.forum.model.Curso
 import br.com.wk.forum.model.Resposta
 import br.com.wk.forum.model.Topico
@@ -53,6 +54,10 @@ class RespostaService(private var respostas: List<Resposta>) {
         return respostas.stream().filter {
             r -> r.topico.id == idTopico
         }.collect(Collectors.toList())
+    }
+
+    fun cadastrar(dto: NovaRespostaForm) {
+       
     }
 
 }
